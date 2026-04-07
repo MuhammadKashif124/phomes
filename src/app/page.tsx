@@ -83,10 +83,49 @@ export default function Home() {
           </FadeIn>
           <div className={styles.benefitsGrid}>
             {[
-              { icon: '🏡', title: 'Off-Market Access', desc: 'Exclusive properties not available on the open market, giving investors a competitive edge.' },
-              { icon: '⚡', title: 'Fast Completions', desc: 'Sales completed in as little as four weeks — ideal for sellers who need to move quickly.' },
-              { icon: '🤝', title: 'Expert Matching', desc: 'We connect serious buyers and motivated sellers from our large, active buyer network.' },
-              { icon: '📋', title: 'Full Support', desc: 'From due diligence to mortgages and solicitors — we guide you every step of the way.' },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L3 13.5V29h9v-8h8v8h9V13.5L16 3z" stroke="#E8622A" strokeWidth="2" strokeLinejoin="round" fill="none"/>
+                    <circle cx="16" cy="17" r="2.5" fill="#E8622A"/>
+                  </svg>
+                ),
+                title: 'Off-Market Access',
+                desc: 'Exclusive properties not available on the open market, giving investors a competitive edge.',
+              },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="12" stroke="#E8622A" strokeWidth="2" fill="none"/>
+                    <path d="M16 9v7l4.5 4.5" stroke="#E8622A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'Fast Completions',
+                desc: 'Sales completed in as little as four weeks — ideal for sellers who need to move quickly.',
+              },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="4" stroke="#E8622A" strokeWidth="2" fill="none"/>
+                    <circle cx="21" cy="11" r="4" stroke="#E8622A" strokeWidth="2" fill="none"/>
+                    <path d="M3 27c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#E8622A" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                    <path d="M21 19c2.761 0 5 2.686 5 6" stroke="#E8622A" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                  </svg>
+                ),
+                title: 'Expert Matching',
+                desc: 'We connect serious buyers and motivated sellers from our large, active buyer network.',
+              },
+              {
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="4" width="16" height="24" rx="2" stroke="#E8622A" strokeWidth="2" fill="none"/>
+                    <path d="M12 4v2a2 2 0 002 2h4a2 2 0 002-2V4" stroke="#E8622A" strokeWidth="2" fill="none"/>
+                    <path d="M12 14h8M12 19h6" stroke="#E8622A" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                ),
+                title: 'Full Support',
+                desc: 'From due diligence to mortgages and solicitors — we guide you every step of the way.',
+              },
             ].map((b, i) => (
               <FadeIn key={b.title} delay={i * 100}>
                 <div className={styles.benefitCard}>

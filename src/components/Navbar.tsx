@@ -16,10 +16,10 @@ const Navbar = () => {
           </Link>
         </div>
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
-          <Link href="/sellers" className={styles.link}>Sellers</Link>
-          <Link href="/landlords" className={styles.link}>Landlords</Link>
-          <Link href="/contact" className={styles.link}>Contact a Branch</Link>
-          <Link href="/contact" className={styles.link}>Book a Valuation</Link>
+          <Link href="/what-we-do" className={styles.link}>What We Do</Link>
+          <Link href="/our-services" className={styles.link}>Our Services</Link>
+          <Link href="/our-clients" className={styles.link}>Our Clients</Link>
+          <Link href="/contact" className={styles.link}>Contact</Link>
         </nav>
         <div className={styles.actions}>
           <Link href="/property-search" className={styles.searchBtn}>Property Search</Link>

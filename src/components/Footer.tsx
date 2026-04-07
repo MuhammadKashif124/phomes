@@ -20,19 +20,16 @@ const Footer = () => {
           </div>
 
           <div className={styles.linkCol}>
-            <h4 className={styles.heading}>Services</h4>
-            <Link href="/sellers">Sellers</Link>
-            <Link href="/landlords">Landlords</Link>
-            <Link href="/buyers">Buyers</Link>
-            <Link href="/mortgages">Mortgages</Link>
+            <h4 className={styles.heading}>Company</h4>
+            <Link href="/what-we-do">What We Do</Link>
+            <Link href="/our-services">Our Services</Link>
+            <Link href="/our-clients">Our Clients</Link>
             <Link href="/">Property Sourcing</Link>
           </div>
 
           <div className={styles.linkCol}>
             <h4 className={styles.heading}>About</h4>
-            <Link href="/about">About Us</Link>
-            <Link href="/contact">Contact a Branch</Link>
-            <Link href="/contact">Book a Valuation</Link>
+            <Link href="/contact">Contact Us</Link>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Cookie Policy</Link>
           </div>

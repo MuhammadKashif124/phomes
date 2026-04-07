@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.pennylanehomes.com)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:uk.linkedin.com)",
+      "Bash(npm run:*)"
     ]
   }
 }
