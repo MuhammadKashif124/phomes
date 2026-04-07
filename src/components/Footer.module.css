@@ -18,16 +18,8 @@
 }
 
 .logo {
-  font-family: var(--font-playfair), serif;
-  font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 20px;
-  color: var(--color-accent);
-}
-
-.logo span {
-  font-weight: 400;
-  color: #fff;
+  display: flex;
 }
 
 .description {
@@ -135,7 +127,7 @@
 }
 
 .submitBtn:hover {
-  background-color: #cc5422;
+  background-color: #b8106a;
 }
 
 .bottom {

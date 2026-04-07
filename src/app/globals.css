@@ -1,8 +1,9 @@
 :root {
-  --color-primary: #1E3A5C;  /* Deep Navy Blue - Penny Lane style */
-  --color-accent: #E8622A;   /* Orange - Penny Lane style */
+  --color-primary: #2E4FA3;  /* Royal Blue - Pennylane logo */
+  --color-accent: #E0187F;   /* Hot Pink/Magenta - Pennylane logo */
+  --color-purple: #7C3DAC;   /* Purple - Pennylane logo */
   --color-bg: #FFFFFF;       /* Pure White */
-  --color-bg-alt: #F8F5F0;   /* Warm Cream */
+  --color-bg-alt: #F5F6FC;   /* Light blue-tinted off-white */
   --color-gray-light: #E5E7EB;
   --color-gray-dark: #4A5568;
   --color-text: #374151;
@@ -88,9 +89,9 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #cc5422;
+  background-color: #b8106a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 98, 42, 0.35);
+  box-shadow: 0 6px 20px rgba(224, 24, 127, 0.35);
   color: #fff;
 }
 

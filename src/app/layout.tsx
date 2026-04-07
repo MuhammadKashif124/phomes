@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "PH Homes | Property Sourcing",
+  title: "Pennylane Sourcing | Property Sourcing",
   description: "Sell fast or invest smart with our Property Sourcing service. Exclusive off-market deals and fast completions.",
 };
 

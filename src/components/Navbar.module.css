@@ -20,17 +20,8 @@
 }
 
 .logo a {
-  font-family: var(--font-playfair), serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  text-decoration: none;
-  letter-spacing: 0.5px;
-}
-
-.logo span {
-  font-weight: 400;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
 }
 
 .nav {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -8,7 +9,15 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.brandCol}>
-            <h3 className={styles.logo}>PH<span>Homes</span></h3>
+            <div className={styles.logo}>
+              <Image
+                src="/logo.png"
+                alt="Pennylane Sourcing"
+                width={160}
+                height={46}
+                style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
             <p className={styles.description}>
               Connecting sellers and investors through smart property sourcing. Fast completions, exclusive deals, full support.
             </p>

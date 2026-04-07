@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -12,7 +13,14 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            PH<span>Homes</span>
+            <Image
+              src="/logo.png"
+              alt="Pennylane Sourcing"
+              width={180}
+              height={52}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </Link>
         </div>
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -22,7 +30,6 @@ const Navbar = () => {
           <Link href="/contact" className={styles.link}>Contact</Link>
         </nav>
         <div className={styles.actions}>
-          <Link href="/property-search" className={styles.searchBtn}>Property Search</Link>
           <button
             className={styles.menuToggle}
             onClick={() => setMenuOpen(!menuOpen)}
