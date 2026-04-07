@@ -1,0 +1,160 @@
+.footer {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 80px 0 40px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.logo {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+}
+
+.logo span {
+  font-weight: 400;
+  color: #fff;
+}
+
+.description {
+  color: #A0AEC0;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.address {
+  color: #A0AEC0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.heading {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+}
+
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.linkCol a {
+  color: #A0AEC0;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.linkCol a:hover {
+  color: #fff;
+}
+
+.phone {
+  color: #A0AEC0;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.phone a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+}
+
+.subscribe {
+  margin-top: 28px;
+}
+
+.subscribe p {
+  color: #A0AEC0;
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: 1px solid #4A5568;
+  padding: 10px 14px;
+  border-radius: 50px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.88rem;
+  transition: border-color 0.3s ease;
+}
+
+.input::placeholder {
+  color: #718096;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.submitBtn {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.submitBtn:hover {
+  background-color: #cc5422;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

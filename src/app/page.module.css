@@ -1,0 +1,229 @@
+/* ─── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(11, 25, 45, 0.72) 50%, rgba(11, 25, 45, 0.25) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5%;
+  color: #fff;
+  max-width: 720px;
+  padding-left: 5%;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  max-width: 580px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ─── What is Property Sourcing ─────────────────────────────────── */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.infoContent {
+  /* text content */
+}
+
+.infoImage {
+  /* image side */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Section Header ─────────────────────────────────────────────── */
+.sectionHeader {
+  margin-bottom: 3rem;
+}
+
+/* ─── Benefits Grid ──────────────────────────────────────────────── */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.benefitCard {
+  background: #fff;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 8px;
+  padding: 32px 24px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benefitCard:hover {
+  box-shadow: 0 12px 36px rgba(30, 58, 92, 0.1);
+  transform: translateY(-4px);
+}
+
+.benefitIcon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.benefitTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.benefitDesc {
+  font-size: 0.95rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+/* ─── Steps Grid ─────────────────────────────────────────────────── */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.stepCard {
+  background: var(--color-bg);
+  border-top: 3px solid var(--color-accent);
+  padding: 28px 20px;
+  border-radius: 0 0 6px 6px;
+}
+
+.section-alt .stepCard {
+  background: #fff;
+}
+
+.stepNumber {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  opacity: 0.35;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.stepTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.stepDesc {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+/* ─── CTA Section ───────────────────────────────────────────────── */
+.ctaSection {
+  background-color: var(--color-primary);
+  padding: 100px 0;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.ctaSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 36px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageWrapper {
+    height: 360px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .heroActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}
