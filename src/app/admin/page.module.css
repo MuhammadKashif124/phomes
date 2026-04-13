@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #07070f;
+  background-color: #F5F6FC;
   font-family: 'Outfit', sans-serif;
   position: relative;
   overflow: hidden;
@@ -21,19 +21,19 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(224, 24, 127, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(224, 24, 127, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(46, 79, 163, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 79, 163, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .glow {
   position: absolute;
-  top: -20%;
+  top: -10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
+  width: 700px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(224, 24, 127, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(46, 79, 163, 0.08) 0%, transparent 70%);
 }
 
 .card {
@@ -41,16 +41,16 @@
   z-index: 1;
   width: 100%;
   max-width: 420px;
-  background: #0d0d1a;
-  border: 1px solid #1a1a2e;
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
   border-radius: 16px;
   padding: 48px 44px;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(224, 24, 127, 0.08);
+  box-shadow: 0 4px 24px rgba(46, 79, 163, 0.08), 0 1px 4px rgba(0,0,0,0.04);
   animation: cardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes cardIn {
-  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -58,8 +58,8 @@
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(224, 24, 127, 0.08);
-  border: 1px solid rgba(224, 24, 127, 0.2);
+  background: rgba(46, 79, 163, 0.07);
+  border: 1px solid rgba(46, 79, 163, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: #f0ecfa;
+  color: #2E4FA3;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
   line-height: 1.1;
@@ -88,7 +88,7 @@
 
 .sub {
   font-size: 0.9rem;
-  color: #555570;
+  color: #4A5568;
   margin-bottom: 36px;
   line-height: 1.5;
 }
@@ -103,12 +103,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(224, 24, 127, 0.08);
-  border: 1px solid rgba(224, 24, 127, 0.25);
+  background: rgba(224, 24, 127, 0.05);
+  border: 1px solid rgba(224, 24, 127, 0.2);
   border-radius: 8px;
   padding: 12px 14px;
   font-size: 0.85rem;
-  color: #ff6aac;
+  color: #c9136f;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -127,34 +127,35 @@
 }
 
 .label {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #555570;
-  font-family: 'JetBrains Mono', monospace;
+  color: #4A5568;
+  font-family: 'Outfit', sans-serif;
 }
 
 .input {
   width: 100%;
-  background: #111122;
-  border: 1px solid #1e1e35;
+  background: #F5F6FC;
+  border: 1px solid #E5E7EB;
   border-radius: 8px;
   padding: 13px 16px;
   font-size: 0.95rem;
-  color: #e8e4f4;
+  color: #374151;
   font-family: 'Outfit', sans-serif;
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
 }
 
 .input::placeholder {
-  color: #333348;
+  color: #9CA3AF;
 }
 
 .input:focus {
-  border-color: rgba(224, 24, 127, 0.5);
-  box-shadow: 0 0 0 3px rgba(224, 24, 127, 0.08);
+  border-color: #2E4FA3;
+  box-shadow: 0 0 0 3px rgba(46, 79, 163, 0.1);
+  background: #fff;
 }
 
 .btn {
@@ -180,7 +181,7 @@
 .btn:hover:not(:disabled) {
   background: #c9136f;
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(224, 24, 127, 0.35);
+  box-shadow: 0 8px 24px rgba(224, 24, 127, 0.3);
 }
 
 .btn:disabled {
@@ -191,7 +192,7 @@
 .spinner {
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(255,255,255,0.4);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
@@ -208,6 +209,6 @@
   gap: 6px;
   margin-top: 28px;
   font-size: 0.75rem;
-  color: #333348;
-  font-family: 'JetBrains Mono', monospace;
+  color: #9CA3AF;
+  font-family: 'Outfit', sans-serif;
 }
