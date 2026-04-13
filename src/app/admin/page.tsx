@@ -43,7 +43,7 @@ export default function AdminLogin() {
               type="text"
               autoComplete="username"
               required
-              placeholder="admin"
+              placeholder="Enter username"
             />
           </div>
 
