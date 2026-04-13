@@ -1,5 +1,8 @@
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { getLeads } from '../actions'
 import LeadsTable from './LeadsTable'
+import LogoutButton from './LogoutButton'
 import styles from './page.module.css'
 
 export default async function DashboardPage({
@@ -7,6 +10,13 @@ export default async function DashboardPage({
 }: {
   searchParams: Promise<{ page?: string; search?: string }>
 }) {
+  // Server-side auth check — runs in Node.js runtime, never bundled into edge output
+  const store = await cookies()
+  const session = store.get('admin_session')
+  if (!session || session.value !== process.env.ADMIN_SECRET) {
+    redirect('/admin')
+  }
+
   const { page: pageStr, search = '' } = await searchParams
   const page = Math.max(1, Number(pageStr) || 1)
 
@@ -54,9 +64,7 @@ export default async function DashboardPage({
               <p className={styles.adminEmail}>phomes.co.uk</p>
             </div>
           </div>
-          <form action="/api/admin/logout" method="POST">
-            <LogoutButton />
-          </form>
+          <LogoutButton />
         </div>
       </aside>
 
@@ -100,6 +108,3 @@ export default async function DashboardPage({
     </div>
   )
 }
-
-// Small client-boundary component just for the logout button
-import LogoutButton from './LogoutButton'
