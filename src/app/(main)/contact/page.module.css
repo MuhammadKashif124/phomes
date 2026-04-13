@@ -93,6 +93,23 @@
   box-shadow: 0 0 0 3px rgba(224, 24, 127, 0.1);
 }
 
+.successMessage {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-primary);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.errorMessage {
+  background-color: #fff0f4;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  color: var(--color-accent);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 900px) {
   .contactGrid {
     grid-template-columns: 1fr;

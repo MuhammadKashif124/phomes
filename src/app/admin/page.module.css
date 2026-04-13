@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #07070f;
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(224, 24, 127, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(224, 24, 127, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(224, 24, 127, 0.12) 0%, transparent 70%);
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: #0d0d1a;
+  border: 1px solid #1a1a2e;
+  border-radius: 16px;
+  padding: 48px 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(224, 24, 127, 0.08);
+  animation: cardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.logoMark {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(224, 24, 127, 0.08);
+  border: 1px solid rgba(224, 24, 127, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #E0187F;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f0ecfa;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: #555570;
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(224, 24, 127, 0.08);
+  border: 1px solid rgba(224, 24, 127, 0.25);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  color: #ff6aac;
+  font-family: 'Outfit', sans-serif;
+}
+
+.errorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E0187F;
+  flex-shrink: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #555570;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.input {
+  width: 100%;
+  background: #111122;
+  border: 1px solid #1e1e35;
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  color: #e8e4f4;
+  font-family: 'Outfit', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #333348;
+}
+
+.input:focus {
+  border-color: rgba(224, 24, 127, 0.5);
+  box-shadow: 0 0 0 3px rgba(224, 24, 127, 0.08);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  background: #E0187F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.btn:hover:not(:disabled) {
+  background: #c9136f;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(224, 24, 127, 0.35);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 28px;
+  font-size: 0.75rem;
+  color: #333348;
+  font-family: 'JetBrains Mono', monospace;
+}
