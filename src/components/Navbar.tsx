@@ -1,24 +1,31 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
             <Image
               src="/logo.png"
               alt="Pennylane Sourcing"
-              width={180}
-              height={52}
-              style={{ objectFit: 'contain' }}
+              width={160}
+              height={46}
+              style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
               priority
             />
           </Link>

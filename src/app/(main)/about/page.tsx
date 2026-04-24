@@ -13,11 +13,13 @@ export default function About() {
     <>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className={styles.headerOverlay}></div>
+        <div className={styles.headerBg}></div>
         <div className={styles.headerContent}>
           <FadeIn>
-            <p className={styles.eyebrow}>About Us</p>
-            <h1 className={styles.headerTitle}>22 Years of Buying and Selling Properties</h1>
+            <span className="eyebrow">About Us</span>
+            <h1 className={styles.headerTitle}>
+              22 Years of Buying<br />and Selling Properties
+            </h1>
           </FadeIn>
         </div>
       </section>
@@ -25,8 +27,8 @@ export default function About() {
       {/* Main Content */}
       <section className="section container">
         <div className={styles.contentGrid}>
-          <div className={styles.mainText}>
-            <FadeIn>
+          <FadeIn>
+            <div className={styles.mainText}>
               <h2 className={styles.sectionTitle}>Our Story</h2>
               <p className={styles.bodyText}>
                 We have been quietly sourcing properties for our landlords for 22 years. That is more than 300 properties to date.
@@ -37,14 +39,14 @@ export default function About() {
               <p className={styles.bodyText}>
                 We deal with every new property opportunity with integrity, honesty and transparency.
               </p>
-              <Link href="/register" className="btn-primary" style={{ marginTop: '2rem', display: 'inline-block' }}>
-                Register
+              <Link href="/register" className="btn-primary" style={{ marginTop: '2.5rem', display: 'inline-block' }}>
+                Register Now
               </Link>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
 
-          <div className={styles.statsPanel}>
-            <FadeIn delay={200}>
+          <FadeIn delay={150}>
+            <div className={styles.statsPanel}>
               <div className={styles.statCard}>
                 <span className={styles.statNumber}>22</span>
                 <span className={styles.statLabel}>Years of Experience</span>
@@ -55,31 +57,29 @@ export default function About() {
               </div>
               <div className={styles.statCard}>
                 <span className={styles.statNumber}>100%</span>
-                <span className={styles.statLabel}>Integrity & Transparency</span>
+                <span className={styles.statLabel}>Integrity &amp; Transparency</span>
               </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Values */}
-      <section className="section-alt">
+      <section className={`section-alt`}>
         <div className="container">
           <FadeIn>
-            <h2 className="title-large text-center">How We Work</h2>
-            <p className="subtitle text-center" style={{ margin: '0 auto 3rem', maxWidth: '640px' }}>
-              Our approach to every property deal is built on three core principles.
-            </p>
+            <span className="eyebrow">How We Work</span>
+            <h2 className="title-large" style={{ marginBottom: '3rem' }}>Our Core Principles</h2>
           </FadeIn>
           <div className={styles.valuesGrid}>
             {[
-              { title: 'Integrity', desc: 'We always act in the best interest of our clients, never compromising on ethical standards.' },
-              { title: 'Honesty', desc: 'Straightforward advice and transparent communication at every stage of the process.' },
-              { title: 'Transparency', desc: 'No hidden fees, no surprises — you always know exactly what is happening with your deal.' },
+              { num: '01', title: 'Integrity', desc: 'We always act in the best interest of our clients, never compromising on ethical standards or taking shortcuts.' },
+              { num: '02', title: 'Honesty', desc: 'Straightforward advice and transparent communication at every stage — no surprises, no hidden agendas.' },
+              { num: '03', title: 'Transparency', desc: 'No hidden fees, no smoke and mirrors. You always know exactly what is happening with your deal.' },
             ].map((v, i) => (
-              <FadeIn key={v.title} delay={i * 120}>
+              <FadeIn key={v.num} delay={i * 100}>
                 <div className={styles.valueCard}>
-                  <div className={styles.valueNumber}>0{i + 1}</div>
+                  <span className={styles.valueNumber}>{v.num}</span>
                   <h3 className={styles.valueTitle}>{v.title}</h3>
                   <p className={styles.valueDesc}>{v.desc}</p>
                 </div>
@@ -94,9 +94,15 @@ export default function About() {
         <div className="container">
           <FadeIn>
             <div className={styles.ctaInner}>
+              <span className="eyebrow">Get Started</span>
               <h2 className={styles.ctaTitle}>Ready to work with us?</h2>
-              <p className={styles.ctaText}>Join our growing network of investors and sellers.</p>
-              <Link href="/register" className="btn-primary">Register Now</Link>
+              <p className={styles.ctaText}>
+                Join our growing network of investors and sellers. Register today to access exclusive off-market opportunities.
+              </p>
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+                <Link href="/register" className="btn-primary">Register as Investor</Link>
+                <Link href="/sell" className="btn-secondary">Sell Your Property</Link>
+              </div>
             </div>
           </FadeIn>
         </div>

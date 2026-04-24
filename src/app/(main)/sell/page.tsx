@@ -22,10 +22,10 @@ export default function Sell() {
     <>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className={styles.headerOverlay}></div>
+        <div className={styles.headerBg}></div>
         <div className={styles.headerContent}>
           <FadeIn>
-            <p className={styles.eyebrow}>Sell</p>
+            <span className="eyebrow">Sell</span>
             <h1 className={styles.headerTitle}>Quick Sales</h1>
           </FadeIn>
         </div>
@@ -75,10 +75,8 @@ export default function Sell() {
       <section className="section-alt">
         <div className="container">
           <FadeIn>
-            <h2 className="title-large text-center">Why sell through Pennylane Sourcing?</h2>
-            <p className="subtitle text-center" style={{ margin: '0 auto 3rem', maxWidth: '620px' }}>
-              We offer a smarter, faster alternative to the open market.
-            </p>
+            <span className="eyebrow">Why Us</span>
+            <h2 className="title-large" style={{ marginBottom: '3rem' }}>Why sell through Pennylane Sourcing?</h2>
           </FadeIn>
           <div className={styles.benefitsGrid}>
             {[
@@ -102,6 +100,7 @@ export default function Sell() {
       {/* Steps */}
       <section className="section container">
         <FadeIn>
+          <span className="eyebrow">The Process</span>
           <h2 className="title-large">How the process works</h2>
           <p className="subtitle">Simple steps from enquiry to completion.</p>
         </FadeIn>
@@ -129,6 +128,7 @@ export default function Sell() {
         <div className="container">
           <FadeIn>
             <div className={styles.ctaInner}>
+              <span className="eyebrow">Get in Touch</span>
               <h2 className={styles.ctaTitle}>Ready to sell?</h2>
               <p className={styles.ctaText}>Fill in our quick form and we'll be in touch within 24 hours.</p>
               <Link href="/sell/form" className="btn-primary">Submit Your Property</Link>

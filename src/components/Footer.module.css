@@ -1,6 +1,7 @@
 .footer {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: #050505;
+  color: var(--color-text);
+  border-top: 1px solid var(--color-border);
   padding: 80px 0 40px;
 }
 
@@ -13,36 +14,38 @@
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: 60px;
+  margin-bottom: 64px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   display: flex;
 }
 
 .description {
-  color: #A0AEC0;
-  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
   margin-bottom: 24px;
-  max-width: 300px;
-  line-height: 1.6;
+  max-width: 280px;
+  line-height: 1.7;
 }
 
 .address {
-  color: #A0AEC0;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
 }
 
 .heading {
   font-family: var(--font-inter), sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
   color: var(--color-accent);
 }
 
@@ -53,8 +56,8 @@
 }
 
 .linkCol a {
-  color: #A0AEC0;
-  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
   transition: color 0.3s ease;
 }
 
@@ -63,18 +66,23 @@
 }
 
 .phone {
-  color: #A0AEC0;
+  color: var(--color-text-muted);
   margin-bottom: 8px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.5;
 }
 
 .phone a {
-  color: #fff;
-  font-size: 1rem;
+  color: var(--color-white);
+  font-size: 0.95rem;
   font-weight: 600;
   display: block;
   margin-top: 4px;
+  transition: color 0.3s ease;
+}
+
+.phone a:hover {
+  color: var(--color-accent);
 }
 
 .subscribe {
@@ -82,63 +90,78 @@
 }
 
 .subscribe p {
-  color: #A0AEC0;
-  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  font-size: 0.84rem;
   margin-bottom: 14px;
+  line-height: 1.5;
 }
 
 .inputGroup {
   display: flex;
-  gap: 8px;
+  gap: 0;
+  border: 1px solid var(--color-border);
 }
 
 .input {
   flex-grow: 1;
   background-color: transparent;
-  border: 1px solid #4A5568;
-  padding: 10px 14px;
-  border-radius: 50px;
+  border: none;
+  padding: 11px 14px;
   color: #fff;
   font-family: inherit;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   transition: border-color 0.3s ease;
 }
 
 .input::placeholder {
-  color: #718096;
+  color: var(--color-text-muted);
 }
 
 .input:focus {
   outline: none;
-  border-color: var(--color-accent);
 }
 
 .submitBtn {
   background-color: var(--color-accent);
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 11px 20px;
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
   white-space: nowrap;
 }
 
 .submitBtn:hover {
-  background-color: #b8106a;
+  background-color: #c01068;
 }
 
 .bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 24px;
-  text-align: center;
-  color: #718096;
-  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
 }
 
-@media (max-width: 900px) {
+.bottomLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.bottomLinks a {
+  color: var(--color-text-muted);
+  transition: color 0.3s ease;
+}
+
+.bottomLinks a:hover {
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -148,5 +171,11 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
 }

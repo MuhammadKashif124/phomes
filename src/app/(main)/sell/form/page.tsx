@@ -25,11 +25,11 @@ export default function SellForm() {
     <>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className={styles.headerOverlay}></div>
+        <div className={styles.headerBg}></div>
         <div className={styles.headerContent}>
           <FadeIn>
-            <p className={styles.eyebrow}>Sell Your Property</p>
-            <h1 className={styles.headerTitle}>Tell Us About Your Property</h1>
+            <span className="eyebrow">Sell Your Property</span>
+            <h1 className={styles.headerTitle}>Tell Us About<br />Your Property</h1>
             <p className={styles.headerSubtitle}>We'll be back in touch within 24 hours.</p>
           </FadeIn>
         </div>

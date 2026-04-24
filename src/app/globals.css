@@ -1,14 +1,24 @@
 :root {
-  --color-primary: #2E4FA3;  /* Royal Blue - Pennylane logo */
-  --color-accent: #E0187F;   /* Hot Pink/Magenta - Pennylane logo */
-  --color-purple: #7C3DAC;   /* Purple - Pennylane logo */
-  --color-bg: #FFFFFF;       /* Pure White */
-  --color-bg-alt: #F5F6FC;   /* Light blue-tinted off-white */
-  --color-gray-light: #E5E7EB;
-  --color-gray-dark: #4A5568;
-  --color-text: #374151;
+  --color-primary: #2E4FA3;
+  --color-accent: #E0187F;
+  --color-purple: #7C3DAC;
 
-  --spacing-section: 100px;
+  /* Dark theme */
+  --color-bg: #080808;
+  --color-bg-alt: #0f0f0f;
+  --color-bg-card: #151515;
+  --color-bg-card-hover: #1c1c1c;
+  --color-border: #242424;
+  --color-border-light: #1e1e1e;
+
+  --color-text: #c8c8c8;
+  --color-text-muted: #666666;
+  --color-white: #ffffff;
+
+  --color-gray-light: #242424;
+  --color-gray-dark: #888888;
+
+  --spacing-section: 110px;
   --border-radius: 4px;
 }
 
@@ -32,8 +42,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), serif;
-  color: var(--color-primary);
-  line-height: 1.2;
+  color: var(--color-white);
+  line-height: 1.15;
 }
 
 a {
@@ -65,7 +75,7 @@ img {
 }
 
 .border-bottom {
-  border-bottom: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .text-center {
@@ -76,11 +86,11 @@ img {
   display: inline-block;
   background-color: var(--color-accent);
   color: #fff;
-  padding: 14px 36px;
-  border-radius: 50px;
+  padding: 15px 40px;
+  border-radius: 2px;
   font-weight: 600;
-  letter-spacing: 0.8px;
-  font-size: 0.875rem;
+  letter-spacing: 1.2px;
+  font-size: 0.8rem;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -89,22 +99,22 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #b8106a;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(224, 24, 127, 0.35);
+  background-color: #c01068;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(224, 24, 127, 0.3);
   color: #fff;
 }
 
 .btn-secondary {
   display: inline-block;
   background-color: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  padding: 12px 34px;
-  border-radius: 50px;
+  color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 15px 40px;
+  border-radius: 2px;
   font-weight: 600;
-  letter-spacing: 0.8px;
-  font-size: 0.875rem;
+  letter-spacing: 1.2px;
+  font-size: 0.8rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -112,23 +122,46 @@ img {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  border-color: var(--color-white);
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 15px 40px;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-white);
+  background-color: rgba(255,255,255,0.06);
 }
 
 .link-underline {
   position: relative;
   font-weight: 500;
   color: var(--color-accent);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .link-underline::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  bottom: -4px;
+  height: 1px;
+  bottom: -3px;
   left: 0;
   background-color: var(--color-accent);
   transform: scaleX(0);
@@ -141,33 +174,47 @@ img {
   transform-origin: left;
 }
 
-.text-gold {
+.text-accent {
   color: var(--color-accent);
 }
 
 .title-massive {
-  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-size: clamp(3.2rem, 6vw, 6rem);
   font-weight: 500;
+  letter-spacing: -1px;
   margin-bottom: 1.5rem;
+  line-height: 1.05;
 }
 
 .title-large {
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 500;
+  letter-spacing: -0.5px;
   margin-bottom: 1.5rem;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: var(--color-gray-dark);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
-  max-width: 800px;
-  font-weight: 300;
-  line-height: 1.7;
+  max-width: 600px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.eyebrow {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  display: block;
 }
 
 @media (max-width: 768px) {
   :root {
-    --spacing-section: 70px;
+    --spacing-section: 72px;
   }
 }

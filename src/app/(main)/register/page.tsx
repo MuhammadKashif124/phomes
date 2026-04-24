@@ -33,11 +33,11 @@ export default function Register() {
     <>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className={styles.headerOverlay}></div>
+        <div className={styles.headerBg}></div>
         <div className={styles.headerContent}>
           <FadeIn>
-            <p className={styles.eyebrow}>Investor Registration</p>
-            <h1 className={styles.headerTitle}>Register as an Investor</h1>
+            <span className="eyebrow">Investor Registration</span>
+            <h1 className={styles.headerTitle}>Register as<br />an Investor</h1>
             <p className={styles.headerSubtitle}>
               Access exclusive off-market property deals sourced by our expert team.
             </p>

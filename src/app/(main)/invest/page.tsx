@@ -22,10 +22,10 @@ export default function Invest() {
     <>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className={styles.headerOverlay}></div>
+        <div className={styles.headerBg}></div>
         <div className={styles.headerContent}>
           <FadeIn>
-            <p className={styles.eyebrow}>Invest</p>
+            <span className="eyebrow">Invest</span>
             <h1 className={styles.headerTitle}>Sourced Investments</h1>
           </FadeIn>
         </div>
@@ -102,10 +102,8 @@ export default function Invest() {
       <section className="section-alt">
         <div className="container">
           <FadeIn>
-            <h2 className="title-large text-center">Types of Investments We Source</h2>
-            <p className="subtitle text-center" style={{ margin: '0 auto 3rem', maxWidth: '620px' }}>
-              We source a wide range of property types to match every investment strategy.
-            </p>
+            <span className="eyebrow">What We Source</span>
+            <h2 className="title-large" style={{ marginBottom: '3rem' }}>Types of Investments We Source</h2>
           </FadeIn>
           <div className={styles.typeGrid}>
             {[
@@ -131,6 +129,7 @@ export default function Invest() {
       {/* How it works */}
       <section className="section container">
         <FadeIn>
+          <span className="eyebrow">The Process</span>
           <h2 className="title-large">How it works for investors</h2>
           <p className="subtitle">A simple process to get you into great property deals.</p>
         </FadeIn>
@@ -159,8 +158,9 @@ export default function Invest() {
         <div className="container">
           <FadeIn>
             <div className={styles.ctaInner}>
+              <span className="eyebrow">Get Started</span>
               <h2 className={styles.ctaTitle}>Start investing today</h2>
-              <p className={styles.ctaText}>Register now to access exclusive off-market property deals.</p>
+              <p className={styles.ctaText}>Register now to access exclusive off-market property deals sourced and vetted by our expert team.</p>
               <Link href="/register" className="btn-primary">Register as Investor</Link>
             </div>
           </FadeIn>
