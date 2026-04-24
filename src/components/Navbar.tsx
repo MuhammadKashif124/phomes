@@ -24,10 +24,11 @@ const Navbar = () => {
           </Link>
         </div>
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
-          <Link href="/what-we-do" className={styles.link}>What We Do</Link>
-          <Link href="/our-services" className={styles.link}>Our Services</Link>
-          <Link href="/our-clients" className={styles.link}>Our Clients</Link>
-          <Link href="/contact" className={styles.link}>Contact</Link>
+          <Link href="/" className={styles.link}>Home</Link>
+          <Link href="/about" className={styles.link}>About</Link>
+          <Link href="/invest" className={styles.link}>Invest</Link>
+          <Link href="/sell" className={styles.link}>Sell</Link>
+          <Link href="/register" className={`${styles.link} ${styles.linkCta}`}>Register</Link>
         </nav>
         <div className={styles.actions}>
           <button

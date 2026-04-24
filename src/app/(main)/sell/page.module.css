@@ -1,0 +1,284 @@
+.pageHeader {
+  position: relative;
+  height: 52vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2096&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.headerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 28, 75, 0.88) 50%, rgba(46, 79, 163, 0.4) 100%);
+}
+
+.headerContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5%;
+  color: #fff;
+}
+
+.eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.headerTitle {
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+}
+
+/* ─── Intro Section ──────────────────────────────────────────────── */
+.introSection {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.sectionTitle {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 1.4rem;
+}
+
+.bodyText {
+  font-size: 1.05rem;
+  color: var(--color-gray-dark);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.nofeeTag {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  padding: 18px 22px;
+}
+
+.nofeeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #22c55e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.nofeeTag strong {
+  display: block;
+  color: #166534;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.nofeeTag p {
+  color: #15803d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ─── Options Card ───────────────────────────────────────────────── */
+.optionsCard {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-gray-light);
+  border-radius: 12px;
+  padding: 38px 32px;
+}
+
+.optionsTitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  font-family: var(--font-playfair), serif;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.optionItem:hover {
+  border-color: var(--color-primary);
+  background: #f8faff;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkmark {
+  display: none;
+}
+
+.optionLabel {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* ─── Benefits Grid ──────────────────────────────────────────────── */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.benefitCard {
+  background: #fff;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 10px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benefitCard:hover {
+  box-shadow: 0 10px 32px rgba(30, 58, 92, 0.1);
+  transform: translateY(-4px);
+}
+
+.benefitIcon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.benefitTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.benefitDesc {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+/* ─── Steps ──────────────────────────────────────────────────────── */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  border-top: 3px solid var(--color-accent);
+  padding: 26px 18px;
+  border-radius: 0 0 6px 6px;
+  background: var(--color-bg-alt);
+}
+
+.stepNumber {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  opacity: 0.3;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.stepTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.stepDesc {
+  font-size: 0.88rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+/* ─── CTA ────────────────────────────────────────────────────────── */
+.cta {
+  background-color: var(--color-primary);
+  padding: 90px 0;
+}
+
+.ctaInner {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .introSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}

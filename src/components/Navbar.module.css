@@ -44,6 +44,19 @@
   color: var(--color-accent);
 }
 
+.linkCta {
+  background-color: var(--color-accent);
+  color: #fff !important;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+}
+
+.linkCta:hover {
+  background-color: #b8106a;
+  color: #fff !important;
+}
+
 .actions {
   display: flex;
   align-items: center;

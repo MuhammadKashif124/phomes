@@ -29,11 +29,12 @@ const Footer = () => {
           </div>
 
           <div className={styles.linkCol}>
-            <h4 className={styles.heading}>Company</h4>
-            <Link href="/what-we-do">What We Do</Link>
-            <Link href="/our-services">Our Services</Link>
-            <Link href="/our-clients">Our Clients</Link>
-            <Link href="/">Property Sourcing</Link>
+            <h4 className={styles.heading}>Navigation</h4>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/invest">Invest</Link>
+            <Link href="/sell">Sell</Link>
+            <Link href="/register">Register</Link>
           </div>
 
           <div className={styles.linkCol}>

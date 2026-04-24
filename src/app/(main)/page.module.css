@@ -1,8 +1,8 @@
 /* ─── Hero ─────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  height: 85vh;
-  min-height: 580px;
+  height: 88vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop');
@@ -13,7 +13,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(20, 35, 90, 0.82) 50%, rgba(46, 79, 163, 0.25) 100%);
+  background: linear-gradient(135deg, rgba(15, 28, 75, 0.88) 40%, rgba(46, 79, 163, 0.5) 100%);
 }
 
 .heroContent {
@@ -23,90 +23,95 @@
   margin: 0 auto;
   padding: 0 5%;
   color: #fff;
-  max-width: 720px;
-  padding-left: 5%;
+}
+
+.heroEyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 18px;
 }
 
 .heroTitle {
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.08;
+  max-width: 740px;
 }
 
 .heroSubtitle {
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
-  max-width: 580px;
-  margin-bottom: 40px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.9);
-  line-height: 1.7;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
 }
 
 .heroActions {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
+  margin-top: 8px;
 }
 
-/* ─── What is Property Sourcing ─────────────────────────────────── */
-.infoGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.heroBtn {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--color-primary);
+  padding: 16px 48px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
 }
 
-.infoContent {
-  /* text content */
-}
-
-.infoImage {
-  /* image side */
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  height: 520px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+.heroBtn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(224, 24, 127, 0.4);
 }
 
 /* ─── Section Header ─────────────────────────────────────────────── */
 .sectionHeader {
   margin-bottom: 3rem;
+  max-width: 760px;
 }
 
-/* ─── Benefits Grid ──────────────────────────────────────────────── */
-.benefitsGrid {
+/* ─── Features Row ───────────────────────────────────────────────── */
+.featuresRow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
 
-.benefitCard {
-  background: #fff;
+.featureCard {
+  background: var(--color-bg-alt);
+  border-radius: 10px;
+  padding: 34px 26px;
   border: 1px solid var(--color-gray-light);
-  border-radius: 8px;
-  padding: 32px 24px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.benefitCard:hover {
-  box-shadow: 0 12px 36px rgba(30, 58, 92, 0.1);
+.featureCard:hover {
+  box-shadow: 0 10px 32px rgba(30, 58, 92, 0.1);
   transform: translateY(-4px);
 }
 
-.benefitIcon {
-  display: flex;
-  align-items: center;
+.featureIcon {
+  font-size: 2rem;
   margin-bottom: 16px;
 }
 
-.benefitTitle {
+.featureTitle {
   font-family: var(--font-inter), sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
@@ -114,52 +119,10 @@
   margin-bottom: 10px;
 }
 
-.benefitDesc {
-  font-size: 0.95rem;
+.featureDesc {
+  font-size: 0.93rem;
   color: var(--color-gray-dark);
-  line-height: 1.6;
-}
-
-/* ─── Steps Grid ─────────────────────────────────────────────────── */
-.stepsGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-}
-
-.stepCard {
-  background: var(--color-bg);
-  border-top: 3px solid var(--color-accent);
-  padding: 28px 20px;
-  border-radius: 0 0 6px 6px;
-}
-
-.section-alt .stepCard {
-  background: #fff;
-}
-
-.stepNumber {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--color-accent);
-  opacity: 0.35;
-  margin-bottom: 12px;
-  line-height: 1;
-}
-
-.stepTitle {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-}
-
-.stepDesc {
-  font-size: 0.9rem;
-  color: var(--color-gray-dark);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ─── CTA Section ───────────────────────────────────────────────── */
@@ -170,7 +133,7 @@
 
 .ctaContent {
   text-align: center;
-  max-width: 640px;
+  max-width: 660px;
   margin: 0 auto;
 }
 
@@ -182,34 +145,42 @@
 
 .ctaSubtitle {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
   line-height: 1.7;
   font-weight: 300;
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .stepsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .benefitsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.ctaActions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 900px) {
-  .infoGrid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.ctaSecondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
 
-  .imageWrapper {
-    height: 360px;
-  }
+.ctaSecondary:hover {
+  background-color: #fff;
+  color: var(--color-primary);
+  border-color: #fff;
+}
 
-  .stepsGrid {
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .featuresRow {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -220,11 +191,17 @@
     align-items: flex-start;
   }
 
-  .stepsGrid {
+  .heroBtn {
+    width: 180px;
+    text-align: center;
+  }
+
+  .featuresRow {
     grid-template-columns: 1fr;
   }
 
-  .benefitsGrid {
-    grid-template-columns: 1fr;
+  .ctaActions {
+    flex-direction: column;
+    align-items: center;
   }
 }
