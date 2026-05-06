@@ -59,8 +59,8 @@ export default function Home() {
             <FadeIn delay={200}>
               <div className={styles.imageWrapper}>
                 <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
-                  alt="Property investment"
+                  src="/images/property-investment.jpg"
+                  alt="The Shard, London"
                   fill
                   style={{ objectFit: 'cover' }}
                 />

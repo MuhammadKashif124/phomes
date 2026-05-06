@@ -67,8 +67,8 @@ export default function WhatWeDo() {
           <FadeIn delay={200}>
             <div className={styles.introImageWrap}>
               <Image
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
-                alt="Property team meeting"
+                src="/images/uk-housing-development.jpg"
+                alt="Contemporary UK housing development, Bedford"
                 fill
                 style={{ objectFit: 'cover' }}
               />
